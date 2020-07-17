@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="welcome">Please submit password</p>
+<input type="password" id="password">
+<label for="password"></label>
+<button onclick="loginFunction()" id="loginbutton">Login</button>
+<p id="empty"></p>
+<img src="Card.png" id="FISKpic" alt="A picture should be showing" style="display:none">
+<script>
+function loginFunction() {
+  var textfield = document.getElementById("password");
+  var par = document.getElementById("welcome");
+  var pic = document.getElementById("FISKpic");
+  var txt = textfield.value;
+  if(txt != "blubblubb6122") {
+    par.innerHTML = "Sorry, incorrect password!";
+  }
+  else {
+    document.getElementById("empty").innerHTML = "<br>";
+    par.innerHTML = "Correct, you are clearly a member of FISK!"; 
+    pic.style.display = "block";
+  }
+} 	
+</script>
+
+</body>
+</html>
